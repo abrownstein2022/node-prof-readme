@@ -7,23 +7,39 @@ const generateREADME = ({ projtitle, descr, installioninstructions, usageinfo, c
 
 
 // TODO: Create an array of questions for user input
-//const questions = [];
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'input',
       name: 'projtitle',
       message: 'Enter the project title:',
+      validate: function (answer) {
+        if (answer.length < 1) {
+            return console.log("Please enter a project title.");
+        }
+        return true;
+       }
     },
     {
       type: 'input',
       name: 'descr',
       message: 'Enter the description:',
+      validate: function (answer) {
+        if (answer.length < 1) {
+            return console.log("Please enter a description.");
+        }
+        return true;
+       }
     },
     {
       type: 'input',
       name: 'installioninstructions',
       message: 'Enter the installation instructions:',
+      validate: function (answer) {
+        if (answer.length < 1) {
+            return console.log("Please enter installation instructions.");
+        }
+        return true;
+       }
     },
     {
       type: 'input',
@@ -43,7 +59,7 @@ inquirer
     {
       type: 'list',
       name: 'license',
-      choices: ['MIT', 'GPL', 'Apache', 'compliant', 'ppl1.3c, ofl','none'],
+      choices: ['MIT', 'GPL', 'Apache', 'compliant', 'ppl1.3c-ofl','none'],
       default: 'MIT',
       message: 'Select a license:',
     },
@@ -56,22 +72,40 @@ inquirer
       type: 'input',
       name: 'email',
       message: 'Enter your email address.',
-    },        
-])
-.then((answers) => {
-    const readmePageContent = generateREADME(answers);
+    }        
+];
 
-    fs.writeFile('README.md', readmePageContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README file!')
-    );
-  });
+
+// .then((answers) => {
+//     const readmePageContent = generateREADME(answers);
+
+//     fs.writeFile('README.md', readmePageContent, (err) =>
+//       err ? console.log(err) : console.log('Successfully created README file!')
+//     );
+//   });
 
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
 
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, err => {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("Your README.md file has been generated!")
+  });
+}
+
 
 // TODO: Create a function to initialize app
 //function init() {}
+function init() {
+  inquirer.prompt(questions)
+  .then(function (userInput) {
+      console.log(userInput)
+      writeToFile("README.md", generateMarkdown(userInput));
+  });
+};
 
 // Function call to initialize app
-//init();
+init();
