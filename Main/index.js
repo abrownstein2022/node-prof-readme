@@ -2,8 +2,23 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateREADME = ({ projtitle, descr, installioninstructions, usageinfo, contributionguidelines, testinstructions, license, githubusername, email}) =>
-  `hello readme`;
+// const generateREADME = ({ projtitle, descr, installioninstructions, usageinfo, contributionguidelines, testinstructions, license, githubusername, email}) =>
+//   `hello readme`;
+
+function inquirerCode(handleAnswers) {
+  const processedAnswer = "My Title";
+  handleAnswers(processedAnswer);
+}
+
+
+function validateInput(message) {
+  return function(answer) {
+    if (answer.length < 1) {
+        return console.log(`Please enter a ${message}.`);
+    }
+    return true;
+   }
+}
 
 
 // TODO: Create an array of questions for user input
@@ -12,34 +27,19 @@ const questions = [
       type: 'input',
       name: 'projtitle',
       message: 'Enter the project title:',
-      validate: function (answer) {
-        if (answer.length < 1) {
-            return console.log("Please enter a project title.");
-        }
-        return true;
-       }
+      validate: validateInput("Project Title")
     },
     {
       type: 'input',
       name: 'descr',
       message: 'Enter the description:',
-      validate: function (answer) {
-        if (answer.length < 1) {
-            return console.log("Please enter a description.");
-        }
-        return true;
-       }
+      validate: validateInput("description")
     },
     {
       type: 'input',
       name: 'installioninstructions',
       message: 'Enter the installation instructions:',
-      validate: function (answer) {
-        if (answer.length < 1) {
-            return console.log("Please enter installation instructions.");
-        }
-        return true;
-       }
+      validate: validateInput("installation instructions")
     },
     {
       type: 'input',
@@ -103,7 +103,7 @@ function init() {
   inquirer.prompt(questions)
   .then(function (userInput) {
       console.log(userInput)
-      writeToFile("README.md", generateMarkdown(userInput));
+      writeToFile("main/README.md", generateMarkdown(userInput));
   });
 };
 
