@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./generateMarkdown.js');
 
 // const generateREADME = ({ projtitle, descr, installioninstructions, usageinfo, contributionguidelines, testinstructions, license, githubusername, email}) =>
 //   `hello readme`;
@@ -10,7 +11,7 @@ function inquirerCode(handleAnswers) {
   handleAnswers(processedAnswer);
 }
 
-
+//use one function to validate user input to questions below
 function validateInput(message) {
   return function(answer) {
     if (answer.length < 1) {
@@ -27,7 +28,7 @@ const questions = [
       type: 'input',
       name: 'projtitle',
       message: 'Enter the project title:',
-      validate: validateInput("Project Title")
+      validate: validateInput("project title")
     },
     {
       type: 'input',
@@ -45,16 +46,19 @@ const questions = [
       type: 'input',
       name: 'usageinfo',
       message: 'Enter the usage information:',
+      validate: validateInput("usage information")
     },
     {
       type: 'input',
       name: 'contributionguidelines',
       message: 'Enter the contribution guidelines:',
+      validate: validateInput("contribution guidelines")
     },
     {
       type: 'input',
       name: 'testinstructions',
       message: 'Enter the test instructions:',
+      validate: validateInput("test instructions")  
     },
     {
       type: 'list',
@@ -67,11 +71,13 @@ const questions = [
       type: 'input',
       name: 'githubusername',
       message: 'Enter your GitHub username:',
+      validate: validateInput("GitHub username")
     },
     {
       type: 'input',
       name: 'email',
       message: 'Enter your email address.',
+      validate: validateInput("email address")
     }        
 ];
 
@@ -103,7 +109,7 @@ function init() {
   inquirer.prompt(questions)
   .then(function (userInput) {
       console.log(userInput)
-      writeToFile("main/README.md", generateMarkdown(userInput));
+      writeToFile("README.md", generateMarkdown(userInput));
   });
 };
 
