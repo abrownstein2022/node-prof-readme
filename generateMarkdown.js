@@ -12,19 +12,24 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+//don't need \n in template strings/string literals only in regular text lines (that have single and double quotes)
+//template strings literallly interpret white space
+//follow heading elements only with space for them to be interpreted as heading
+// the content between the backticks is called a string literal
 function generateMarkdown(data) {
-  return `hello there world!
-  \nMy title is ${data.projtitle}
-  \nMy descr is ${data.descr}
-  \nInstallation instructions are ${data.installioninstructions}
-  \nMy usage info is ${data.usageinfo}
-  \nMy contribution guidelines is ${data.contributionguidelines} 
-  \nMy test instructions are ${data.testinstructions}
-  \nMy license is ${data.license} 
-  \nMy GitHub username is ${data.githubusername}
-  \nMy email address is ${data.email} 
-  
-  
+  return `
+My title is ${data.projtitle}
+My descr is ${data.descr}
+Installation instructions are ${data.installioninstructions}
+My usage info is ${data.usageinfo}
+image ${imageurl}
+media  ${mediaurl}
+My credits info is ${data.creditsinfo} 
+My test instructions are ${data.testinstructions}
+My license is ${data.license} 
+My GitHub username is ${data.githubusername}
+My email address is ${data.email} 
+features  ${features}
   `
 ;
 }

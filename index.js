@@ -50,9 +50,9 @@ const questions = [
     },
     {
       type: 'input',
-      name: 'contributionguidelines',
-      message: 'Enter the contribution guidelines:',
-      validate: validateInput("contribution guidelines")
+      name: 'creditsinfo',
+      message: 'Enter the credits information:',
+      validate: validateInput("credits info")
     },
     {
       type: 'input',
@@ -78,8 +78,32 @@ const questions = [
       name: 'email',
       message: 'Enter your email address.',
       validate: validateInput("email address")
-    }        
-];
+    }      
+    ,
+    {
+      type: 'input',
+      name: 'contributioninfo',
+      message: 'Enter the how to contribute information:',
+      validate: validateInput("contributioninfo")
+    },
+    {
+      type: 'input',
+      name: 'features',
+      message: 'Enter the how to features information:',
+      validate: validateInput("features")
+    },
+    {
+      type: 'input',
+      name: 'imageurl',
+      message: 'Include image URL?  Leave blank for none.'
+    }      
+    ,
+    {
+      type: 'input',
+      name: 'mediaurl',
+      message: 'Include media URL?  Leave blank for none.'
+    } 
+  ];
 
 
 // .then((answers) => {
@@ -109,7 +133,7 @@ function init() {
   inquirer.prompt(questions)
   .then(function (userInput) {
       console.log(userInput)
-      writeToFile("README.md", generateMarkdown(userInput));
+      writeToFile("README" + Date.now() + ".md", generateMarkdown(userInput));
   });
 };
 
