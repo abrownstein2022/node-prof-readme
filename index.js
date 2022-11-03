@@ -126,12 +126,13 @@ function writeToFile(fileName, data) {
 
 
 // TODO: Create a function to initialize app
-//date.now() means today's date.  Output this way to get unique test file each time.  Will change once working.
+//date.now() means today's date.  Output this way to get unique test file each time.  Will change once project is complete.
+//writeToFile("README" + Date.now() + ".md", generateMarkdown(userInput));
 function init() {
   inquirer.prompt(questions)
   .then(function (userInput) {
       console.log(userInput)
-      writeToFile("README" + Date.now() + ".md", generateMarkdown(userInput));
+      writeToFile("README.md", generateMarkdown(userInput));
   });
 };
 
