@@ -15,7 +15,7 @@ function inquirerCode(handleAnswers) {
 function validateInput(message) {
   return function(answer) {
     if (answer.length < 1) {
-        return console.log(`Please enter a ${message}.`);
+        return console.log(`Please enter a ${message}:`);
     }
     return true;
    }
@@ -50,22 +50,44 @@ const questions = [
     },
     {
       type: 'input',
+      name: 'imageurl',
+      message: 'Include image URL?  Leave blank for none.'
+    },
+    {
+      type: 'input',
+      name: 'mediaurl',
+      message: 'Include media URL?  Leave blank for none.'
+    },
+    {
+      type: 'input',
       name: 'creditsinfo',
       message: 'Enter the credits information:',
       validate: validateInput("credits info")
+    },
+    {
+      type: 'list',
+      name: 'license',
+      choices: ['MIT', 'GPL', 'Apache 2.0', 'MPL-2.0', 'CDDL-1.0','none'],
+      default: 'MIT',
+      message: 'Select a license:',
+    },
+    {
+      type: 'input',
+      name: 'features',
+      message: 'Enter the features information:',
+      validate: validateInput("features")
+    },
+    {
+      type: 'input',
+      name: 'contributioninfo',
+      message: 'Enter the how-to-contribute information:',
+      validate: validateInput("contributioninfo")
     },
     {
       type: 'input',
       name: 'testinstructions',
       message: 'Enter the test instructions:',
       validate: validateInput("test instructions")  
-    },
-    {
-      type: 'list',
-      name: 'license',
-      choices: ['MIT', 'GPL', 'Apache', 'compliant', 'ppl1.3c-ofl','none'],
-      default: 'MIT',
-      message: 'Select a license:',
     },
     {
       type: 'input',
@@ -76,33 +98,9 @@ const questions = [
     {
       type: 'input',
       name: 'email',
-      message: 'Enter your email address.',
+      message: 'Enter your email address:',
       validate: validateInput("email address")
-    }      
-    ,
-    {
-      type: 'input',
-      name: 'contributioninfo',
-      message: 'Enter the how to contribute information:',
-      validate: validateInput("contributioninfo")
-    },
-    {
-      type: 'input',
-      name: 'features',
-      message: 'Enter the how to features information:',
-      validate: validateInput("features")
-    },
-    {
-      type: 'input',
-      name: 'imageurl',
-      message: 'Include image URL?  Leave blank for none.'
-    }      
-    ,
-    {
-      type: 'input',
-      name: 'mediaurl',
-      message: 'Include media URL?  Leave blank for none.'
-    } 
+    }
   ];
 
 
@@ -128,7 +126,7 @@ function writeToFile(fileName, data) {
 
 
 // TODO: Create a function to initialize app
-//function init() {}
+//date.now() means today's date.  Output this way to get unique test file each time.  Will change once working.
 function init() {
   inquirer.prompt(questions)
   .then(function (userInput) {
