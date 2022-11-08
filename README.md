@@ -1,11 +1,11 @@
-# r
+# Node.js Challenge 9: Professional README Generator
 
-![license](https://img.shields.io/badge/license-MIT-lightgreen)
+![license](https://img.shields.io/badge/license-GPL-black)
 
 ## Description
 
 ```md
-r
+The project is a command line application that dynamically generates a professional README.md file from a user's input using the Inquirer package v8.2.4.  The coding bootcamp README guide was used as the benchmark to achieve all the required elements. 
 ```
 
 ## Table of Contents
@@ -23,55 +23,55 @@ r
 ## Installation
 
 ```md
-r
+Clone my repo for this project, install node and inquirer.  Then enter npm init and npm install inquirer.
 ```
 
 ## Usage
 
 ```md
-r
+Run node index.js from the terminal and answer the question prompts.
 ```
 
+![example image](ch9-screens.png)
 
-
-
+![example media file](ch9-demo.webm.mov)
 
 ## Credits
 
 ```md
-r 
+Alexis Brownstein, bootcamp instructor, TAs and Tutor 
 ```
 
 ## License
 
  ```md
- MIT 
+ GPL 
 ```
 
 Link to license text:
-https://opensource.org/licenses/MIT
+https://opensource.org/licenses/gpl-license
 
 
-![badge](https://img.shields.io/badge/license-MIT-lightgreen)
+![badge](https://img.shields.io/badge/license-GPL-black)
 
 
 ## Features
 
 ```md
 The main features in this project are:
-r
+table of contents prompts for description, usage, installation instructions, adding an image and animation file, license with badge display, link to license text
 ```
 
 ## How-to-Contribute
 
 ```md
-r
+n/a
 ```
 
 ## Test Instructions
 
 ```md
-r
+n/a
 ```
 
 ## Questions
@@ -79,7 +79,7 @@ r
 ```md
 Feel free to contact me with any questions.
 
-My email is: 34.
+My email is: alexis@drdatabase.com.
 ```
 
 My GitHub Profile link:
