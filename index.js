@@ -15,7 +15,7 @@ function inquirerCode(handleAnswers) {
 function validateInput(message) {
   return function(answer) {
     if (answer.length < 1) {
-        return console.log(`Please enter a ${message}:`);
+        return console.log(`Please enter ${message}!`);
     }
     return true;
    }
@@ -34,19 +34,19 @@ const questions = [
       type: 'input',
       name: 'descr',
       message: 'Enter the description:',
-      validate: validateInput("descr")
+      validate: validateInput("description")
     },
     {
       type: 'input',
       name: 'installioninstructions',
       message: 'Enter the installation instructions:',
-      validate: validateInput("installationinstructions")
+      validate: validateInput("installation instructions")
     },
     {
       type: 'input',
       name: 'usageinfo',
       message: 'Enter the usage information:',
-      validate: validateInput("usageinfo")
+      validate: validateInput("usage info")
     },
     {
       type: 'input',
@@ -62,7 +62,7 @@ const questions = [
       type: 'input',
       name: 'creditsinfo',
       message: 'Enter the credits information:',
-      validate: validateInput("creditsinfo")
+      validate: validateInput("credits info")
     },
     {
       type: 'list',
@@ -81,13 +81,13 @@ const questions = [
       type: 'input',
       name: 'contributioninfo',
       message: 'Enter the how-to-contribute information:',
-      validate: validateInput("contributioninfo")
+      validate: validateInput("contribution info")
     },
     {
       type: 'input',
       name: 'testinstructions',
       message: 'Enter the test instructions:',
-      validate: validateInput("testinstructions")  
+      validate: validateInput("test instructions")  
     },
     {
       type: 'input',

@@ -60,13 +60,12 @@ ${renderLicenseLink(license)}
 //https://github.com/abrownstein2022 
 //need to handle github profile link piece the esame as rendering license so we can use the github username entered.
 function renderGitHubLink(githubusername){
-  let githublink = 'https://github.com/' + githubusername
+  let githublink = 'https://github.com/' + githubusername;
   return `My GitHub Profile link:
   
   \`\`\`md
   ${githublink}
  \`\`\`
- 
  `
  }
 

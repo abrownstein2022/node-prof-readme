@@ -1,11 +1,11 @@
-# x
+# a
 
 ![license](https://img.shields.io/badge/license-MIT-lightgreen)
 
 ## Description
 
 ```md
-x
+a
 ```
 
 ## Table of Contents
@@ -23,13 +23,13 @@ x
 ## Installation
 
 ```md
-x
+a
 ```
 
 ## Usage
 
 ```md
-x
+a
 ```
 
 
@@ -39,7 +39,7 @@ x
 ## Credits
 
 ```md
-x 
+a 
 ```
 
 ## License
@@ -59,19 +59,19 @@ https://opensource.org/licenses/MIT
 
 ```md
 The main features in this project are:
-x
+a
 ```
 
 ## How-to-Contribute
 
 ```md
-x
+a
 ```
 
 ## Test Instructions
 
 ```md
-x
+a
 ```
 
 ## Questions
@@ -79,16 +79,12 @@ x
 ```md
 Feel free to contact me with any questions.
 
-My email is: alexis@drdatabase.com.
-
+My email is: alexis.
 ```
 
 My GitHub Profile link:
   
   ```md
-  ![badge]https://github.com/abrownstein2022
+  https://github.com/abrownstein2022
  ```
  
- 
-
-
