@@ -63,9 +63,7 @@ function renderGitHubLink(githubusername){
   let githublink = 'https://github.com/' + githubusername;
   return `My GitHub Profile link:
   
-  \`\`\`md
   ${githublink}
- \`\`\`
  `
  }
 
