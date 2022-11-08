@@ -57,6 +57,19 @@ ${renderLicenseLink(license)}
 `
 }
 
+//https://github.com/abrownstein2022 
+//need to handle github profile link piece the esame as rendering license so we can use the github username entered.
+function renderGitHubLink(githubusername){
+  let githublink = 'https://github.com/' + githubusername
+  return `My GitHub Profile link:
+  
+  \`\`\`md
+  ${githublink}
+ \`\`\`
+ 
+ `
+ }
+
 // TODO: Create a function to generate markdown for README
 //don't need \n in template strings/string literals only in regular text lines (that have single and double quotes)
 //template strings literallly interpret white space
@@ -98,7 +111,7 @@ ${data.descr}
 - [Features](#features)
 - [How-to-Contribute](#how-to-contribute)
 - [Tests](#test-instructions)
-- [Contact Info](#contact-info)
+- [Questions](#questions)
 
 ## Installation
 
@@ -143,16 +156,15 @@ ${data.contributioninfo}
 ${data.testinstructions}
 \`\`\`
 
-## Contact Info
+## Questions
 
 \`\`\`md
 Feel free to contact me with any questions.
 
-My github username is: ${data.githubusername}.
-
 My email is: ${data.email}.
 \`\`\`
 
+${renderGitHubLink(data.githubusername)}
 `
 ;
 }

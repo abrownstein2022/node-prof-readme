@@ -34,19 +34,19 @@ const questions = [
       type: 'input',
       name: 'descr',
       message: 'Enter the description:',
-      validate: validateInput("description")
+      validate: validateInput("descr")
     },
     {
       type: 'input',
       name: 'installioninstructions',
       message: 'Enter the installation instructions:',
-      validate: validateInput("installation instructions")
+      validate: validateInput("installationinstructions")
     },
     {
       type: 'input',
       name: 'usageinfo',
       message: 'Enter the usage information:',
-      validate: validateInput("usage information")
+      validate: validateInput("usageinfo")
     },
     {
       type: 'input',
@@ -62,7 +62,7 @@ const questions = [
       type: 'input',
       name: 'creditsinfo',
       message: 'Enter the credits information:',
-      validate: validateInput("credits info")
+      validate: validateInput("creditsinfo")
     },
     {
       type: 'list',
@@ -87,19 +87,19 @@ const questions = [
       type: 'input',
       name: 'testinstructions',
       message: 'Enter the test instructions:',
-      validate: validateInput("test instructions")  
+      validate: validateInput("testinstructions")  
     },
     {
       type: 'input',
       name: 'githubusername',
       message: 'Enter your GitHub username:',
-      validate: validateInput("GitHub username")
+      validate: validateInput("githubusername")
     },
     {
       type: 'input',
       name: 'email',
       message: 'Enter your email address:',
-      validate: validateInput("email address")
+      validate: validateInput("email")
     }
   ];
 

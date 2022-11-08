@@ -19,6 +19,7 @@ ${data.descr}
 - [Features](#features)
 - [How-to-Contribute](#how-to-contribute)
 - [Tests](tests)
+- [Questions](questions)
 
 ## Installation
 
@@ -66,10 +67,11 @@ N/A
 
 ${data.testinstructions}
   
-## Contact Info
+## Questions
 
 Feel free to contact me with any questions.
 
-My github username is: ${data.githubusername}.
-
 My email is: ${data.email}.
+
+Link to my GitHub profile:  
+![GitHub Profile](https://github.com/${data.githubusername})
