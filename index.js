@@ -6,10 +6,10 @@ const generateMarkdown = require('./generateMarkdown.js');
 // const generateREADME = ({ projtitle, descr, installioninstructions, usageinfo, contributionguidelines, testinstructions, license, githubusername, email}) =>
 //   `hello readme`;
 
-function inquirerCode(handleAnswers) {
-  const processedAnswer = "My Title";
-  handleAnswers(processedAnswer);
-}
+// function inquirerCode(handleAnswers) {
+//   const processedAnswer = "My Title";
+//   handleAnswers(processedAnswer);
+// }
 
 //use one function to validate user input to questions below
 function validateInput(message) {

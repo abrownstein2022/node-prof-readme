@@ -1,4 +1,4 @@
-# Node.js Challenge 9: Professional README Generator
+# Professional README Generator Using Node.js
 
 ![license](https://img.shields.io/badge/license-GPL-black)
 
@@ -34,7 +34,7 @@ Run node index.js from the terminal and answer the question prompts.
 
 ![example image](ch9-screens.png)
 
-![example media file](ch9-demo.webm.mov)
+![example media file](ch9-demo.mp4)
 
 ## Credits
 
@@ -59,7 +59,7 @@ https://opensource.org/licenses/gpl-license
 
 ```md
 The main features in this project are:
-table of contents prompts for description, usage, installation instructions, adding an image and animation file, license with badge display, link to license text
+table of contents prompts for description, usage, installati+on instructions, adding an image and animation file, license with badge display, link to license text
 ```
 
 ## How-to-Contribute
